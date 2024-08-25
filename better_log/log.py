@@ -1,5 +1,5 @@
 import datetime
-from util import coloredtext
+from better_log import coloredtext
 from colorama import Fore, Back
 
 

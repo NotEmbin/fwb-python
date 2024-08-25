@@ -5,7 +5,7 @@ import textures
 import data
 from textures import get_texture
 from sys import exit
-from util import log
+from better_log import log
 
 pygame.init()
 window_width = 1500

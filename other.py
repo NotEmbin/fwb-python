@@ -1,5 +1,5 @@
 import pygame
-from util import log
+from better_log import log
 
 pygame.init()
 print = log.new_log # NOQA

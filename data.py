@@ -1,6 +1,6 @@
 import glob
 import json
-from util.log import new_log
+from better_log.log import new_log
 from other import path_to_data
 
 print = new_log # NOQA

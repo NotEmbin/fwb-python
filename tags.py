@@ -1,7 +1,7 @@
 import glob
 import json
 from data import registries
-from util.log import new_log
+from better_log.log import new_log
 from other import path_to_tag_data
 from other import flatten
 

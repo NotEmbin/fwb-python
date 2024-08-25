@@ -1,7 +1,7 @@
 import pygame
 import glob
 import json
-from util import log
+from better_log import log
 from other import path_to_assets
 from other import to_namespace
 
