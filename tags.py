@@ -9,6 +9,8 @@ from other import flatten
 print = new_log # NOQA
 tags = {}
 
+# print('The ' + reg + ' tag ' + tag + ' references ' + s + ', so that tag\'s contents will be merged into ' + tag, "tag")  # NOQA
+
 
 def load_tags(full_reload: bool = True, location: str = "", dump: bool = False):
     global tags
@@ -41,13 +43,13 @@ def load_tags(full_reload: bool = True, location: str = "", dump: bool = False):
                 print('Failed to load ' + reg + ' tag "' + name + '"', "error")
         tags[reg] = tag_dict
 
+        # replace references to other tags with the contents of the referenced tag
         while True:
             if "#" not in str(tag_dict):
                 break
             for tag in tag_dict:
                 for i, s in enumerate(tag_dict[tag]):
                     if s.startswith("#"):
-                        print('The ' + reg + ' tag ' + tag + ' references ' + s + ', so that tag\'s contents will be merged into ' + tag, "tag") # NOQA
                         tag_dict[tag][i] = tag_dict[s.replace("#", "", 1)]
                 tag_dict[tag] = flatten(tag_dict[tag])
     if dump:

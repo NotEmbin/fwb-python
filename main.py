@@ -38,11 +38,11 @@ def show_character(chara_id, pos):
     y = pos[1]
     if frames != 1:
         chara_text = (chara_text + "/" + str((anim_tick % frames) + 1))
-    if other.to_namespace(chara_id) in data.tall_characters:
+    if other.to_namespace(chara_id) in tags.tags["character"]["fwb:increased_size"]:
         height = 150
         y -= 15
-    chara_text = "fwb:misc/selection_4"
-    if other.to_namespace(chara_id) in data.characters_with_flipped_texture:
+    # chara_text = "fwb:misc/selection_4"
+    if other.to_namespace(chara_id) in tags.tags["character"]["fwb:flipped_texture"]:
         screen.blit(pygame.transform.flip(get_texture(chara_text, width, height), True, False), (x, y))
     else:
         screen.blit(get_texture(chara_text, width, height), (x, y))

@@ -12,21 +12,6 @@ registries = [
     "enemy"
 ]
 
-tall_characters = [
-    "fwb:fredbear",
-    "fwb:spring_bonnie",
-    "fwb:nightmare_fredbear",
-    "fwb:nightmare"
-]
-
-characters_with_flipped_texture = [
-    "fwb:medic",
-    "fwb:paper_pals",
-    "fwb:plushtrap",
-    "fwb:scout",
-    "fwb:spy"
-]
-
 
 def load_registries(full_reload: bool = True, location: str = "", dump: bool = False):
     global registry
