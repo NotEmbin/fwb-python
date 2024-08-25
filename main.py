@@ -1,8 +1,8 @@
 import pygame
 import other
 import tags
-import textures
 import data
+from load import load_resources
 from textures import get_texture
 from sys import exit
 from better_log import log
@@ -48,10 +48,7 @@ print("test warn", "warn")
 print("test error", "error")
 print("test fatal", "fatal")
 
-should_dump = False
-textures.load_textures(dump=should_dump)
-data.load_registries(dump=should_dump)
-tags.load_tags(dump=should_dump)
+load_resources()
 
 while True:
     for event in pygame.event.get():
@@ -64,14 +61,14 @@ while True:
     # screen.blit(get_texture("misc/selection_1", 80, 40), (200, 400))
     # screen.blit(get_texture("test:white", 80, 40), (200, 450))
     # screen.blit(get_texture("fwb:i_do_not_exist_lololol", 80, 40), (200, 500))
-    xxx = 5
-    yyy = 5
+    xxx = 15
+    yyy = 15
     for _ in data.registry["character"].keys():
         # show_character(_, (xxx, yyy))
         screen.blit(get_texture(_.replace(":", ":character_icon/"), 70, 70), (xxx, yyy))
         xxx += 75
         if xxx >= 1575:
-            xxx = 5
+            xxx = 15
             yyy += 75
 
     screen.blit(texture("version_text"), (7, 690))

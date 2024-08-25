@@ -4,15 +4,15 @@ from better_log import log
 pygame.init()
 print = log.new_log # NOQA
 
-game_version_id = 1
-game_version = "1.0.0"
+game_version = 1
+game_version_display = "1.0.0"
 game_id = "fwb"
 game_name = "FNAF World Battle" # NOQA
 font = pygame.font.Font("assets/fwb/font/minecraft.ttf", 24)
 
 
 def to_namespace(string):
-    s = string
+    s = string.lower()
     if ":" not in s:
         s = game_id + ":" + s
     return s
@@ -70,5 +70,5 @@ def flatten(arr):
 
 textures = {
     "fallback": pygame.image.load(assets_path("fwb:fallback")),
-    "version_text": font.render((game_name + " " + game_version), False, "white")
+    "version_text": font.render((game_name + " " + game_version_display), False, "white")
 }
