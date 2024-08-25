@@ -8,7 +8,7 @@ from sys import exit
 from better_log import log
 
 pygame.init()
-window_width = 1500
+window_width = 1600
 window_height = 900
 screen = pygame.display.set_mode((window_width, window_height), vsync=False)
 pygame.display.set_caption(other.game_name)
@@ -61,17 +61,18 @@ while True:
 
     screen.fill("#4f0000")
 
-    screen.blit(get_texture("misc/selection_1", 80, 40), (200, 400))
-    screen.blit(get_texture("test:white", 80, 40), (200, 450))
-    screen.blit(get_texture("fwb:i_do_not_exist_lololol", 80, 40), (200, 500))
-    xxx = 0
-    yyy = 0
+    # screen.blit(get_texture("misc/selection_1", 80, 40), (200, 400))
+    # screen.blit(get_texture("test:white", 80, 40), (200, 450))
+    # screen.blit(get_texture("fwb:i_do_not_exist_lololol", 80, 40), (200, 500))
+    xxx = 5
+    yyy = 5
     for _ in data.registry["character"].keys():
-        show_character(_, (xxx, yyy))
-        xxx += 125
-        if xxx >= 1500:
-            xxx = 0
-            yyy += 125
+        # show_character(_, (xxx, yyy))
+        screen.blit(get_texture(_.replace(":", ":character_icon/"), 70, 70), (xxx, yyy))
+        xxx += 75
+        if xxx >= 1575:
+            xxx = 5
+            yyy += 75
 
     screen.blit(texture("version_text"), (7, 690))
 
