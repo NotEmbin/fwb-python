@@ -28,13 +28,16 @@ characters_with_flipped_texture = [
 ]
 
 
-def load_registries(location=""):
+def load_registries(full_reload: bool = True, location: str = "", dump: bool = False):
     global registry
-    registry = {}
+    if full_reload:
+        registry = {}
+        for _ in registries:
+            registry[_] = {}
     for reg in registries:
         reg_files = glob.glob(pathname=(location + "data/*/" + reg + "/**/*.json"), recursive=True)
         # print(reg_files)
-        reg_dict = {}
+        reg_dict = registry[reg]
         for f in reg_files:
             name = path_to_data(f, reg)
             with open(f) as file:
@@ -45,3 +48,6 @@ def load_registries(location=""):
             except:
                 print(("Failed to load " + reg + " \"" + name + "\""), "error")
         registry[reg] = reg_dict
+    if dump:
+        with open("dumps/registry.json", "w") as f:
+            f.write(json.dumps(registry, indent=2))

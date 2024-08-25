@@ -1,0 +1,879 @@
+{
+  "character": {
+    "fwb:alex": {
+      "health": 200,
+      "attacks": [
+        "fwb:prize_ball_2",
+        "fwb:pickaxe_toss",
+        "fwb:instant_health"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:angry_freddy": {
+      "health": 260,
+      "attacks": [
+        "fwb:4th_wall",
+        "fwb:gift_boxes",
+        "fwb:jumpscare_4"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:animdude": {
+      "health": 280,
+      "attacks": [
+        "fwb:4th_wall",
+        "fwb:slasher",
+        "fwb:neon_wall_2"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:bacon_hair": {
+      "health": 185,
+      "attacks": [
+        "fwb:toxic_song",
+        "fwb:bacon_ambush",
+        "fwb:birthday_song"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:bb": {
+      "health": 160,
+      "attacks": [
+        "fwb:balloons",
+        "fwb:bite",
+        "fwb:punch"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:bonnie": {
+      "id": "bonnie",
+      "health": 150,
+      "attacks": [
+        "fwb:jumpscare",
+        "fwb:speed_song",
+        "fwb:regen_song"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:chica": {
+      "health": 150,
+      "attacks": [
+        "fwb:instant_health",
+        "fwb:cupcake",
+        "fwb:happy_jam"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:cleetus": {
+      "health": 195,
+      "attacks": [
+        "fwb:jumpscare_2",
+        "fwb:bite_2",
+        "fwb:instant_health_2"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:crying_child": {
+      "health": 190,
+      "attacks": [
+        "fwb:prize_ball",
+        "fwb:balloons",
+        "fwb:regen_song"
+      ],
+      "frames_of_animation": 2,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:ddededodediamante": {
+      "health": 235,
+      "attacks": [
+        "fwb:jumpscare_4",
+        "fwb:prize_ball_3",
+        "fwb:birthday_song"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:demoman": {
+      "health": 250,
+      "attacks": [
+        "fwb:bottle",
+        "fwb:stickybomb",
+        "fwb:chargin_targe"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:drowned": {
+      "health": 200,
+      "attacks": [
+        "fwb:trident",
+        "fwb:jumpscare_3",
+        "fwb:bad_pizza"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:enderman": {
+      "health": 220,
+      "attacks": [
+        "fwb:neon_wall",
+        "fwb:block_throw",
+        "fwb:prize_ball_2"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:endo_01": {
+      "health": 200,
+      "attacks": [
+        "fwb:endo_army",
+        "fwb:bite_2",
+        "fwb:prize_ball_2"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:endo_02": {
+      "health": 230,
+      "attacks": [
+        "fwb:endo_army",
+        "fwb:neon_wall",
+        "fwb:prize_ball_3"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:engineer": {
+      "health": 200,
+      "attacks": [
+        "fwb:build_dispenser",
+        "fwb:wrench",
+        "fwb:build_sentry"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:epic_mario": {
+      "health": -7,
+      "attacks": [],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:foxy": {
+      "health": 150,
+      "attacks": [
+        "fwb:jumpscare",
+        "fwb:bite",
+        "fwb:hook"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:fredbear": {
+      "id": "fredbear",
+      "health": 230,
+      "attacks": [
+        "fwb:prize_ball_2",
+        "fwb:mega_bite",
+        "fwb:birthday_song"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": 0
+    },
+    "fwb:freddy": {
+      "id": "freddy",
+      "health": 150,
+      "attacks": [
+        "fwb:jumpscare",
+        "fwb:mic_toss",
+        "fwb:pizza_wheel"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:funtime_foxy": {
+      "health": 235,
+      "attacks": [
+        "fwb:happy_jam",
+        "fwb:instant_health_3",
+        "fwb:gift_boxes"
+      ],
+      "frames_of_animation": 12
+    },
+    "fwb:golden_freddy": {
+      "id": "golden_freddy",
+      "health": 225,
+      "attacks": [
+        "fwb:prize_ball_2",
+        "fwb:mega_bite",
+        "fwb:instant_health_2"
+      ],
+      "frames_of_animation": 5,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:heavy": {
+      "health": 280,
+      "attacks": [
+        "fwb:instant_health_2",
+        "fwb:mini_gun",
+        "fwb:punch_2"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:husk": {
+      "health": 200,
+      "attacks": [
+        "fwb:toxic_song",
+        "fwb:punch_2",
+        "fwb:jack_o_bomb"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:jack_o_bonnie": {
+      "health": 260,
+      "attacks": [
+        "fwb:jack_o_bomb",
+        "fwb:mega_bite",
+        "fwb:slasher"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:jack_o_chica": {
+      "health": 255,
+      "attacks": [
+        "fwb:jack_o_bomb",
+        "fwb:mega_bite",
+        "fwb:buzzsaw"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:jj": {
+      "health": 165,
+      "attacks": [
+        "fwb:balloons",
+        "fwb:regen_song",
+        "fwb:unscrew"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:joe": {
+      "health": 240,
+      "attacks": [
+        "fwb:jumpscare_3",
+        "fwb:prize_ball_3",
+        "fwb:power_song"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:joella": {
+      "health": 230,
+      "attacks": [
+        "fwb:jumpscare_3",
+        "fwb:speed_song",
+        "fwb:regen_song"
+      ],
+      "frames_of_animation": 1
+    },
+    "fwb:mangle": {
+      "health": 160,
+      "attacks": [
+        "fwb:instant_health",
+        "fwb:bite",
+        "fwb:jumpscare"
+      ],
+      "frames_of_animation": 11
+    },
+    "fwb:medic": {
+      "health": 230,
+      "attacks": [
+        "fwb:instant_health_2",
+        "fwb:ubercharge",
+        "fwb:gift_boxes"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:mr_chipper": {
+      "health": 250,
+      "attacks": [
+        "fwb:buzzsaw",
+        "fwb:neon_wall_2",
+        "fwb:gift_boxes"
+      ],
+      "frames_of_animation": 10
+    },
+    "fwb:nightmare": {
+      "health": 240,
+      "attacks": [
+        "fwb:gift_boxes",
+        "fwb:mega_bite",
+        "fwb:unscrew_2"
+      ],
+      "frames_of_animation": 12,
+      "size_override": null,
+      "y_pos_override": null,
+      "attacks_per_mode": {
+        "classic_mode": [
+          "fwb:gift_boxes_chance",
+          "fwb:mega_bite",
+          "fwb:pizza_wheel_2"
+        ],
+        "endless_classic_mode": [
+          "fwb:gift_boxes_chance",
+          "fwb:mega_bite",
+          "fwb:pizza_wheel_2"
+        ]
+      }
+    },
+    "fwb:nightmare_bb": {
+      "health": 250,
+      "attacks": [
+        "fwb:balloons_2",
+        "fwb:jumpscare_4",
+        "fwb:slasher"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:nightmare_bonnie": {
+      "health": 205,
+      "attacks": [
+        "fwb:pizza_wheel_2",
+        "fwb:bite_2",
+        "fwb:toxic_song"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:nightmare_chica": {
+      "health": 205,
+      "attacks": [
+        "fwb:bite_2",
+        "fwb:bad_pizza",
+        "fwb:unscrew_2"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:nightmare_foxy": {
+      "health": 205,
+      "attacks": [
+        "fwb:pizza_wheel_2",
+        "fwb:mega_bite",
+        "fwb:hook_2"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:nightmare_fredbear": {
+      "id": "nightmare_fredbear",
+      "health": 215,
+      "attacks": [
+        "fwb:freddles",
+        "fwb:mega_bite",
+        "fwb:regen_song"
+      ],
+      "frames_of_animation": 12,
+      "size_override": null,
+      "y_pos_override": 0
+    },
+    "fwb:nightmare_freddy": {
+      "health": 205,
+      "attacks": [
+        "fwb:freddles",
+        "fwb:bite_2",
+        "fwb:instant_health_2"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:nightmare_puppet": {
+      "health": 270,
+      "attacks": [
+        "fwb:4th_wall",
+        "fwb:slasher",
+        "fwb:prize_ball_3"
+      ],
+      "frames_of_animation": 10
+    },
+    "fwb:paper_pals": {
+      "health": 200,
+      "attacks": [
+        "fwb:mystery_box_2",
+        "fwb:gift_boxes",
+        "fwb:power_song"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:phantom_bb": {
+      "health": 170,
+      "attacks": [
+        "fwb:balloons",
+        "fwb:toxic_bite",
+        "fwb:jumpscare_3"
+      ],
+      "frames_of_animation": 10
+    },
+    "fwb:phantom_chica": {
+      "health": 170,
+      "attacks": [
+        "fwb:armor_song",
+        "fwb:jumpscare_3",
+        "fwb:instant_health"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:phantom_foxy": {
+      "health": 170,
+      "attacks": [
+        "fwb:bad_pizza",
+        "fwb:hook_2",
+        "fwb:unscrew"
+      ],
+      "frames_of_animation": 11
+    },
+    "fwb:phantom_freddy": {
+      "health": 170,
+      "attacks": [
+        "fwb:bad_pizza",
+        "fwb:toxic_song",
+        "fwb:mic_toss"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:phantom_mangle": {
+      "health": 170,
+      "attacks": [
+        "fwb:jumpscare_3",
+        "fwb:bad_pizza",
+        "fwb:toxic_bite"
+      ],
+      "frames_of_animation": 12,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:phantom_puppet": {
+      "health": 200,
+      "attacks": [
+        "fwb:jumpscare_3",
+        "fwb:gift_boxes",
+        "fwb:toxic_song"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:plushtrap": {
+      "health": 220,
+      "attacks": [
+        "fwb:bad_pizza",
+        "fwb:armor_song",
+        "fwb:jumpscare_4"
+      ],
+      "frames_of_animation": 10
+    },
+    "fwb:puppet": {
+      "health": 200,
+      "attacks": [
+        "fwb:birthday_song",
+        "fwb:instant_health_2",
+        "fwb:prize_ball_2"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:purple_guy": {
+      "health": 240,
+      "attacks": [
+        "fwb:slasher",
+        "fwb:buzzsaw",
+        "fwb:armor_song"
+      ],
+      "frames_of_animation": 2
+    },
+    "fwb:pyro": {
+      "health": 250,
+      "attacks": [
+        "fwb:fire_charges",
+        "fwb:instant_health",
+        "fwb:pizza_wheel_2"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:roblox_noob": {
+      "health": 185,
+      "attacks": [
+        "fwb:toxic_song",
+        "fwb:prize_ball",
+        "fwb:armor_song"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:roblox_rapper": {
+      "health": 200,
+      "attacks": [
+        "fwb:mic_toss_2",
+        "fwb:money_shower",
+        "fwb:instant_health_2"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:robux_man": {
+      "health": 170,
+      "attacks": [
+        "fwb:money_shower",
+        "fwb:punch",
+        "fwb:instant_health"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:rthro_man": {
+      "health": 170,
+      "attacks": [
+        "fwb:wrench",
+        "fwb:jumpscare_2",
+        "fwb:prize_ball"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:scott": {
+      "health": 220,
+      "attacks": [
+        "fwb:tiny_4th_wall",
+        "fwb:regen_song",
+        "fwb:punch_2"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:scout": {
+      "health": 200,
+      "attacks": [
+        "fwb:ham_toss",
+        "fwb:instant_health",
+        "fwb:buzzsaw"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:shadow_bonnie": {
+      "health": 240,
+      "attacks": [
+        "fwb:neon_wall",
+        "fwb:speed_song",
+        "fwb:gift_boxes"
+      ],
+      "frames_of_animation": 12
+    },
+    "fwb:shadow_freddy": {
+      "health": 210,
+      "attacks": [
+        "fwb:prize_ball_2",
+        "fwb:mega_bite",
+        "fwb:unscrew"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:sheldon_cooper": {
+      "health": 69,
+      "attacks": [
+        "fwb:gas_leak",
+        "fwb:gas_leak",
+        "fwb:gas_leak"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:skeleton": {
+      "health": 200,
+      "attacks": [
+        "fwb:buzzsaw",
+        "fwb:jumpscare_2",
+        "fwb:bow_shot"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:sniper": {
+      "health": 200,
+      "attacks": [
+        "fwb:bushwacka",
+        "fwb:huntsman",
+        "fwb:jarate"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:snow_golem": {
+      "health": 150,
+      "attacks": [
+        "fwb:snow_balls",
+        "fwb:instant_health",
+        "fwb:prize_ball"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:soldier": {
+      "health": 270,
+      "attacks": [
+        "fwb:rocket_launcher",
+        "fwb:instant_health",
+        "fwb:market_gardener"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:springtrap": {
+      "id": "springtrap",
+      "health": 230,
+      "attacks": [
+        "fwb:jumpscare_3",
+        "fwb:springlocks_2",
+        "fwb:unscrew_2"
+      ],
+      "frames_of_animation": 12,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:spring_bonnie": {
+      "health": 230,
+      "attacks": [
+        "fwb:springlocks_2",
+        "fwb:jumpscare_3",
+        "fwb:instant_health_3"
+      ],
+      "frames_of_animation": 12,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:spy": {
+      "health": 200,
+      "attacks": [
+        "fwb:disguise",
+        "fwb:instant_health",
+        "fwb:slasher"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:steve": {
+      "health": 200,
+      "attacks": [
+        "fwb:jumpscare_2",
+        "fwb:sword_toss",
+        "fwb:punch"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:stray": {
+      "health": 200,
+      "attacks": [
+        "fwb:toxic_song",
+        "fwb:jumpscare_2",
+        "fwb:bow_shot_2"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:toy_bonnie": {
+      "health": 160,
+      "attacks": [
+        "fwb:bash_jam",
+        "fwb:bite",
+        "fwb:instant_health"
+      ],
+      "frames_of_animation": 11
+    },
+    "fwb:toy_chica": {
+      "health": 160,
+      "attacks": [
+        "fwb:instant_health",
+        "fwb:cupcake",
+        "fwb:prize_ball"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:toy_freddy": {
+      "health": 160,
+      "attacks": [
+        "fwb:bite_2",
+        "fwb:mic_toss",
+        "fwb:regen_song"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:uncle_bonnie": {
+      "health": 270,
+      "attacks": [
+        "fwb:4th_wall",
+        "fwb:endo_army",
+        "fwb:ubercharge"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:withered_bonnie": {
+      "id": "withered_bonnie",
+      "health": 170,
+      "attacks": [
+        "fwb:pizza_wheel_2",
+        "fwb:punch",
+        "fwb:slasher"
+      ],
+      "frames_of_animation": 11,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:withered_chica": {
+      "health": 170,
+      "attacks": [
+        "fwb:prize_ball",
+        "fwb:bite_2",
+        "fwb:regen_song"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:withered_foxy": {
+      "health": 170,
+      "attacks": [
+        "fwb:bite_2",
+        "fwb:prize_ball",
+        "fwb:slasher"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:withered_freddy": {
+      "health": 170,
+      "attacks": [
+        "fwb:top_hat_throw",
+        "fwb:mic_toss",
+        "fwb:slasher"
+      ],
+      "frames_of_animation": 10,
+      "size_override": null,
+      "y_pos_override": null
+    },
+    "fwb:zombie": {
+      "health": 200,
+      "attacks": [
+        "fwb:jumpscare_2",
+        "fwb:bite_2",
+        "fwb:buzzsaw"
+      ],
+      "frames_of_animation": 1,
+      "size_override": null,
+      "y_pos_override": null
+    }
+  },
+  "attack": {
+    "test:test_attack": {
+      "funny": true,
+      "gay": "apple_attack"
+    },
+    "test:test_attack_2": {
+      "funny": true,
+      "gay": "apple_attack2"
+    }
+  },
+  "enemy": {
+    "fwb:orp": {
+      "funny": false,
+      "gay": "Tar"
+    },
+    "fwb:test/orp": {
+      "funny": false,
+      "gay": "Tar"
+    },
+    "test:test_enem": {
+      "funny": true,
+      "gay": "apple"
+    }
+  }
+}

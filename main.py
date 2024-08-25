@@ -1,11 +1,11 @@
 import pygame
 import other
+import tags
 import textures
 import data
 from textures import get_texture
 from sys import exit
 from util import log
-import time
 
 pygame.init()
 window_width = 1500
@@ -41,6 +41,7 @@ def show_character(chara_id, pos):
     if other.to_namespace(chara_id) in data.tall_characters:
         height = 150
         y -= 15
+    chara_text = "fwb:misc/selection_4"
     if other.to_namespace(chara_id) in data.characters_with_flipped_texture:
         screen.blit(pygame.transform.flip(get_texture(chara_text, width, height), True, False), (x, y))
     else:
@@ -53,7 +54,12 @@ print("test fatal", "fatal")
 
 print(data.registry.keys())
 
-data.load_registries()
+should_dump = False
+textures.load_textures(dump=should_dump)
+data.load_registries(dump=should_dump)
+tags.load_tags(dump=should_dump)
+
+print(tags.tags)
 
 while True:
     for event in pygame.event.get():

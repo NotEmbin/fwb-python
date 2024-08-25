@@ -60,6 +60,14 @@ def new_image(img):
     return pygame.image.load(assets_path(img)).convert()
 
 
+def flatten(arr):
+    rt = []
+    for i in arr:
+        if isinstance(i, list): rt.extend(flatten(i))
+        else: rt.append(i)
+    return rt
+
+
 textures = {
     "fallback": pygame.image.load(assets_path("fwb:fallback")),
     "version_text": font.render((game_name + " " + game_version), False, "white")

@@ -1,5 +1,6 @@
 import pygame
 import glob
+import json
 from util import log
 from other import path_to_assets
 from other import to_namespace
@@ -8,10 +9,6 @@ pygame.init()
 print = log.new_log # NOQA
 
 texture_dict = {}
-texture_width = {}
-texture_height = {}
-
-texture_files = glob.glob(pathname="assets/*/textures/**/*.png", recursive=True)
 
 
 def get_texture(texture, width: int, height: int):
@@ -24,9 +21,17 @@ def get_texture(texture, width: int, height: int):
     return used_texture.convert_alpha()
 
 
-for txt in texture_files:
-    name = path_to_assets(txt)
-    texture_dict[name] = pygame.image.load(txt)
-    texture_width[name] = texture_dict[name].get_width()
-    texture_height[name] = texture_dict[name].get_height()
-    print('Loaded texture "' + name + '"')
+def load_textures(full_reload: bool = True, location: str = "", dump: bool = False):
+    global texture_dict
+    if full_reload:
+        texture_dict = {}
+    texture_files = glob.glob(pathname=location + "assets/*/textures/**/*.png", recursive=True)
+    for txt in texture_files:
+        name = path_to_assets(txt)
+        texture_dict[name] = pygame.image.load(txt)
+        print('Loaded texture "' + name + '"')
+    if dump:
+        texture_keys = dict()
+        texture_keys["loaded_textures"] = list(texture_dict.keys())
+        with open("dumps/textures.json", "w") as f:
+            f.write(json.dumps(texture_keys, indent=2))
