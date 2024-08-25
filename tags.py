@@ -1,6 +1,5 @@
 import glob
 import json
-import numpy
 from data import registries
 from util.log import new_log
 from other import path_to_tag_data

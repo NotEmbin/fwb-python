@@ -16,11 +16,8 @@ clock = pygame.time.Clock()
 tick = 0
 anim_tick = 0
 
-
 print = log.new_log # NOQA
 
-test_surface = pygame.Surface((200, 200))
-test_surface.fill((248, 0, 248))
 test_num = int((2**63) - 1)
 print(test_num)
 
@@ -41,7 +38,6 @@ def show_character(chara_id, pos):
     if other.to_namespace(chara_id) in tags.tags["character"]["fwb:increased_size"]:
         height = 150
         y -= 15
-    # chara_text = "fwb:misc/selection_4"
     if other.to_namespace(chara_id) in tags.tags["character"]["fwb:flipped_texture"]:
         screen.blit(pygame.transform.flip(get_texture(chara_text, width, height), True, False), (x, y))
     else:
@@ -52,14 +48,10 @@ print("test warn", "warn")
 print("test error", "error")
 print("test fatal", "fatal")
 
-print(data.registry.keys())
-
 should_dump = False
 textures.load_textures(dump=should_dump)
 data.load_registries(dump=should_dump)
 tags.load_tags(dump=should_dump)
-
-print(tags.tags)
 
 while True:
     for event in pygame.event.get():
