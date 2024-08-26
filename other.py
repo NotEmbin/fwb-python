@@ -8,7 +8,7 @@ game_version = 1
 game_version_display = "1.0.0"
 game_id = "fwb"
 game_name = "FNAF World Battle" # NOQA
-font = pygame.font.Font("assets/fwb/font/minecraft.ttf", 24)
+font = pygame.font.Font("assets/fwb/font/minecraft.ttf", 16)
 
 
 def to_namespace(string):

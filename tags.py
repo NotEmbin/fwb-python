@@ -22,15 +22,15 @@ def load_tags(full_reload: bool = True, location: str = "", dump: bool = False):
         tag_dict = tags[reg]
         for f in tag_files:
             name = path_to_tag_data(f, reg)
-            with open(f) as file:
-                file_contents = json.load(file)
-            replace = False
-            if "name" in tag_dict:
-                if "replace" in file_contents:
-                    replace = file_contents["replace"]
-                else:
-                    replace = False
             try:
+                with open(f) as file:
+                    file_contents = json.load(file)
+                replace = False
+                if "name" in tag_dict:
+                    if "replace" in file_contents:
+                        replace = file_contents["replace"]
+                    else:
+                        replace = False
                 if name not in tag_dict:
                     replace = True
                 if replace:

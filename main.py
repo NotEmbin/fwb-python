@@ -1,15 +1,15 @@
 import pygame
 import other
-import tags
 import data
+from tags import tags
 from load import load_resources
 from textures import get_texture
 from sys import exit
 from better_log import log
 
 pygame.init()
-window_width = 1600
-window_height = 900
+window_width = 1280
+window_height = 720
 screen = pygame.display.set_mode((window_width, window_height), vsync=False)
 pygame.display.set_caption(other.game_name)
 clock = pygame.time.Clock()
@@ -35,10 +35,10 @@ def show_character(chara_id, pos):
     y = pos[1]
     if frames != 1:
         chara_text = (chara_text + "/" + str((anim_tick % frames) + 1))
-    if other.to_namespace(chara_id) in tags.tags["character"]["fwb:increased_size"]:
+    if other.to_namespace(chara_id) in tags["character"]["fwb:increased_size"]:
         height = 150
         y -= 15
-    if other.to_namespace(chara_id) in tags.tags["character"]["fwb:flipped_texture"]:
+    if other.to_namespace(chara_id) in tags["character"]["fwb:flipped_texture"]:
         screen.blit(pygame.transform.flip(get_texture(chara_text, width, height), True, False), (x, y))
     else:
         screen.blit(get_texture(chara_text, width, height), (x, y))
@@ -66,10 +66,10 @@ while True:
     for _ in data.registry["character"].keys():
         # show_character(_, (xxx, yyy))
         screen.blit(get_texture(_.replace(":", ":character_icon/"), 70, 70), (xxx, yyy))
-        xxx += 75
-        if xxx >= 1575:
+        xxx += 80
+        if xxx >= 800:
             xxx = 15
-            yyy += 75
+            yyy += 80
 
     screen.blit(texture("version_text"), (7, 690))
 
