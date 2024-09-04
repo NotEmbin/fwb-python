@@ -24,14 +24,14 @@ def load_registries(full_reload: bool = True, location: str = "", dump: bool = F
         # print(reg_files)
         reg_dict = registry[reg]
         for f in reg_files:
-            name = path_to_data(f, reg)
+            name = path_to_data(f, reg, location)
             with open(f) as file:
                 file_contents = json.load(file)
             try:
                 reg_dict[name] = file_contents
                 print("Loaded " + reg + " \"" + name + "\"")
-            except:
-                print(("Failed to load " + reg + " \"" + name + "\""), "error")
+            except Exception as e:
+                print(("Failed to load " + reg + " \"" + name + "\": " + e), "error")
         registry[reg] = reg_dict
     if dump:
         with open("dumps/registry.json", "w") as f:

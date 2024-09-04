@@ -1,7 +1,9 @@
 import pygame
 import other
 import data
-from tags import tags
+import tags
+from menu import Button
+from menu import SmallButton
 from load import load_resources
 from textures import get_texture
 from sys import exit
@@ -35,10 +37,10 @@ def show_character(chara_id, pos):
     y = pos[1]
     if frames != 1:
         chara_text = (chara_text + "/" + str((anim_tick % frames) + 1))
-    if other.to_namespace(chara_id) in tags["character"]["fwb:increased_size"]:
+    if other.to_namespace(chara_id) in tags.get_tag("character", "fwb:increased_size"):
         height = 150
         y -= 15
-    if other.to_namespace(chara_id) in tags["character"]["fwb:flipped_texture"]:
+    if other.to_namespace(chara_id) in tags.get_tag("character", "fwb:flipped_texture"):
         screen.blit(pygame.transform.flip(get_texture(chara_text, width, height), True, False), (x, y))
     else:
         screen.blit(get_texture(chara_text, width, height), (x, y))
@@ -49,6 +51,10 @@ print("test error", "error")
 print("test fatal", "fatal")
 
 load_resources()
+
+test_button: Button = Button(text="test")
+
+print(tags.get_tag("character", "goober:really_sad"))
 
 while True:
     for event in pygame.event.get():
@@ -72,6 +78,7 @@ while True:
             yyy += 80
 
     screen.blit(texture("version_text"), (7, 690))
+    test_button.render(screen, (400, 400))
 
     pygame.display.update()
     clock.tick(60)

@@ -11,7 +11,7 @@ print = log.new_log # NOQA
 texture_dict = {}
 
 
-def get_texture(texture, width: int, height: int):
+def get_texture(texture: str, width: int, height: int):
     texture_id = to_namespace(texture)
     try:
         used_texture = texture_dict[texture_id]
@@ -27,7 +27,7 @@ def load_textures(full_reload: bool = True, location: str = "", dump: bool = Fal
         texture_dict = {}
     texture_files = glob.glob(pathname=location + "assets/*/textures/**/*.png", recursive=True)
     for txt in texture_files:
-        name = path_to_assets(txt)
+        name = path_to_assets(txt, location)
         texture_dict[name] = pygame.image.load(txt)
         print('Loaded texture "' + name + '"')
     if dump:

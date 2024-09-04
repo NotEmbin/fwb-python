@@ -4,11 +4,22 @@ from data import registries
 from better_log.log import new_log
 from other import path_to_tag_data
 from other import flatten
+from other import to_namespace
 
 print = new_log # NOQA
 tags = {}
 
 # print('The ' + reg + ' tag ' + tag + ' references ' + s + ', so that tag\'s contents will be merged into ' + tag, "tag")  # NOQA
+
+
+def get_tag(registry: str, tag_name: str):
+    global tags
+    try:
+        return tags[registry, to_namespace(tag_name)]
+    except KeyError as e:
+        print(f'Unknown key(s) {e} when trying to get contents of {registry} tag "{to_namespace(tag_name)}"', "error")
+        print(tags, "error")
+        return []
 
 
 def load_tags(full_reload: bool = True, location: str = "", dump: bool = False):
@@ -21,7 +32,7 @@ def load_tags(full_reload: bool = True, location: str = "", dump: bool = False):
         tag_files = glob.glob(pathname=(location + "data/*/tags/" + reg + "/**/*.json"), recursive=True)
         tag_dict = tags[reg]
         for f in tag_files:
-            name = path_to_tag_data(f, reg)
+            name = path_to_tag_data(f, reg, location)
             try:
                 with open(f) as file:
                     file_contents = json.load(file)
@@ -38,8 +49,10 @@ def load_tags(full_reload: bool = True, location: str = "", dump: bool = False):
                 else:
                     tag_dict[name] = (tag_dict[name] + file_contents["data"])
                 print('Loaded ' + reg + ' tag "' + name + '"')
-            except:
-                print('Failed to load ' + reg + ' tag "' + name + '"', "error")
+            except KeyError as e:
+                print(f'The {reg} tag "{name}" does not contain an expected key: {e}', "error")
+            except Exception as e:
+                print('Failed to load ' + reg + ' tag "' + name + '" due to error: ' + e, "error")
         tags[reg] = tag_dict
 
         # replace references to other tags with the contents of the referenced tag
@@ -47,10 +60,18 @@ def load_tags(full_reload: bool = True, location: str = "", dump: bool = False):
             if "#" not in str(tag_dict):
                 break
             for tag in tag_dict:
-                for i, s in enumerate(tag_dict[tag]):
-                    if s.startswith("#"):
-                        tag_dict[tag][i] = tag_dict[s.replace("#", "", 1)]
+                for i, tag_name in enumerate(tag_dict[tag]):
+                    if tag_name.startswith("#"):
+                        try:
+                            tag_dict[tag][i] = tag_dict[tag_name.replace("#", "", 1)]
+                        except KeyError as e:
+                            print(f'The {reg} tag "{tag}" references unknown tag "{tag_name}": {e}', "fatal")
+                            tag_dict[tag][i] = "uh oh"
+                        except Exception as e:
+                            print(f'An error occurred when resolving tag references in the {reg} tag "{tag}": {e}', "fatal")
+                            tag_dict[tag][i] = []
                 tag_dict[tag] = flatten(tag_dict[tag])
+    print(tags)
     if dump:
         with open("dumps/tags.json", "w") as f:
             f.write(json.dumps(tags, indent=2))

@@ -8,7 +8,7 @@ game_version = 1
 game_version_display = "1.0.0"
 game_id = "fwb"
 game_name = "FNAF World Battle" # NOQA
-font = pygame.font.Font("assets/fwb/font/minecraft.ttf", 16)
+font = pygame.font.Font("assets/fwb/font/minecraft.ttf", 24)
 
 
 def to_namespace(string):
@@ -27,10 +27,11 @@ def assets_path(path):
     return "assets/" + s + ".png"
 
 
-def path_to_assets(path):
+def path_to_assets(path, location: str = ""):
     s = path.replace("assets\\", "", 1)
     s = s.replace("\\textures\\", ":", 1)
     s = s.replace("\\", "/")
+    s = s.replace(location, "", 1)
     s = replace_last(s, ".png", "", 1)
     return s
 
@@ -40,18 +41,20 @@ def data_path(path):
     return "data/" + s + ".json"
 
 
-def path_to_data(path, reg):
+def path_to_data(path, reg, location: str = ""):
     s = path.replace("data\\", "", 1)
     s = s.replace("\\" + reg + "\\", ":", 1)
     s = s.replace("\\", "/")
+    s = s.replace(location, "", 1)
     s = replace_last(s, ".json", "", 1)
     return s
 
 
-def path_to_tag_data(path, reg):
+def path_to_tag_data(path, reg, location: str = ""):
     s = path.replace("data\\", "", 1)
     s = s.replace("\\tags\\" + reg + "\\", ":", 1)
     s = s.replace("\\", "/")
+    s = s.replace(location, "", 1)
     s = replace_last(s, ".json", "", 1)
     return s
 
