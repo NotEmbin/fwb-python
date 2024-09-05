@@ -35,7 +35,7 @@ class Button:
         self.button_type = button_type
         self.text = self.font.render(text, False, "white")
         self.text_shadow = self.font.render(text, False, "gray20")
-        self.shadow_offset = 2
+        self.shadow_offset = self.font.size("offset")[1] / 8
 
     def render(self, screen: pygame.surface.Surface, pos: tuple, clicked: bool = False, centered: bool = True) -> None:
         mx, my = pygame.mouse.get_pos()

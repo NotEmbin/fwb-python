@@ -4,7 +4,7 @@ import data
 import tags
 import logging
 from menu import Button
-from menu import SmallButton
+from menu import EmptyButton
 from load import load_resources
 from textures import get_texture
 from sys import exit
@@ -49,6 +49,7 @@ load_resources()
 
 test_button: Button = Button(text="Super Duper Text")
 test_button_2: Button = Button(text="Super Duper Text Two!")
+version_text: Button = Button(text=f'{other.game_name} v{other.game_version_display}', button_type=EmptyButton)
 
 while True:
     clicked: bool = False
@@ -74,7 +75,7 @@ while True:
             xxx = 15
             yyy += 80
 
-    screen.blit(texture("version_text"), (7, 690))
+    version_text.render(screen, (4, 700), centered=False)
     test_button.render(screen, (1100, 680), clicked)
     test_button_2.render(screen, (640, 100), clicked)
     test_button.render(screen, (640, 600), clicked)
