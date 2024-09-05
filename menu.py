@@ -24,6 +24,7 @@ class ButtonType:
 
 SmallButton: ButtonType = ButtonType("ui/buttons/button_small", 24, 8)
 DefaultButton: ButtonType = ButtonType("ui/buttons/button", 48, 8)
+EmptyButton: ButtonType = ButtonType("empty", 8, 8)
 
 
 class Button:
@@ -36,10 +37,13 @@ class Button:
         self.text_shadow = self.font.render(text, False, "gray20")
         self.shadow_offset = 2
 
-    def render(self, screen: pygame.surface.Surface, pos: tuple, clicked: bool = False) -> None:
+    def render(self, screen: pygame.surface.Surface, pos: tuple, clicked: bool = False, centered: bool = True) -> None:
         mx, my = pygame.mouse.get_pos()
         button_x_offset = self.button_type.width / 2
         button_y_offset = self.button_type.height / 2
+        if not centered:
+            button_x_offset = 0
+            button_y_offset = 0
         self.rect = pygame.Rect(pos[0] - button_x_offset, pos[1] - button_y_offset, self.button_type.width, self.button_type.height)
         if self.rect.collidepoint((mx, my)):
             if clicked:
@@ -53,6 +57,9 @@ class Button:
         text_height = self.text.get_height()
         text_x_offset = button_x_offset - (self.button_type.width / 2) - (text_width / 2)
         text_y_offset = button_y_offset - (self.button_type.height / 2) - (text_height / 2)
+        if not centered:
+            text_x_offset = 0
+            text_y_offset = 0
         screen.blit(self.text_shadow, (pos[0] + text_x_offset + self.shadow_offset, pos[1] + text_y_offset + self.shadow_offset))
         screen.blit(self.text, (pos[0] + text_x_offset, pos[1] + text_y_offset))
 

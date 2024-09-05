@@ -12,7 +12,7 @@ font = pygame.font.Font("assets/fwb/font/minecraft.ttf", 24)
 font_small = pygame.font.Font("assets/fwb/font/minecraft.ttf", 16)
 
 
-def to_namespace(string):
+def to_namespace(string) -> str:
     s = string.lower()
     if ":" not in s:
         s = game_id + ":" + s
@@ -28,7 +28,7 @@ def assets_path(path):
     return "assets/" + s + ".png"
 
 
-def path_to_assets(path, location: str = ""):
+def path_to_assets(path, location: str = "") -> str:
     s = path.replace("assets\\", "", 1)
     s = s.replace("\\textures\\", ":", 1)
     s = s.replace("\\", "/")
@@ -37,6 +37,7 @@ def path_to_assets(path, location: str = ""):
     return s
 
 
+@DeprecationWarning
 def data_path(path):
     s = path.replace(":", "/", 1)
     return "data/" + s + ".json"
@@ -60,6 +61,7 @@ def path_to_tag_data(path, reg, location: str = ""):
     return s
 
 
+@DeprecationWarning
 def new_image(img):
     return pygame.image.load(assets_path(img)).convert()
 
@@ -73,6 +75,5 @@ def flatten(arr):
 
 
 textures = {
-    "fallback": pygame.image.load(assets_path("fwb:fallback")),
     "version_text": font.render((game_name + " " + game_version_display), False, "white")
 }
