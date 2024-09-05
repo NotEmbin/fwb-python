@@ -51,10 +51,13 @@ test_button: Button = Button(text="Super Duper Text")
 test_button_2: Button = Button(text="Super Duper Text Two!")
 
 while True:
+    clicked: bool = False
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             exit()
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            clicked: bool = True
 
     screen.fill("#4f0000")
 
@@ -72,9 +75,9 @@ while True:
             yyy += 80
 
     screen.blit(texture("version_text"), (7, 690))
-    test_button.render(screen, (1100, 680))
-    test_button_2.render(screen, (640, 100))
-    test_button.render(screen, (640, 600))
+    test_button.render(screen, (1100, 680), clicked)
+    test_button_2.render(screen, (640, 100), clicked)
+    test_button.render(screen, (640, 600), clicked)
 
     pygame.display.update()
     clock.tick(60)
