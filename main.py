@@ -2,13 +2,14 @@ import pygame
 import other
 import data
 import tags
+import logging
 from menu import Button
 from menu import SmallButton
 from load import load_resources
 from textures import get_texture
 from sys import exit
-from better_log import log
 
+logging.basicConfig(format="[%(asctime)s] [%(levelname)s] %(message)s", level=logging.DEBUG)
 pygame.init()
 window_width = 1280
 window_height = 720
@@ -18,10 +19,8 @@ clock = pygame.time.Clock()
 tick = 0
 anim_tick = 0
 
-print = log.new_log # NOQA
-
 test_num = int((2**63) - 1)
-print(test_num)
+logging.debug(test_num)
 
 
 def texture(texture_name):
@@ -46,15 +45,10 @@ def show_character(chara_id, pos):
         screen.blit(get_texture(chara_text, width, height), (x, y))
 
 
-print("test warn", "warn")
-print("test error", "error")
-print("test fatal", "fatal")
-
 load_resources()
 
-test_button: Button = Button(text="test")
-
-print(tags.get_tag("character", "goober:really_sad"))
+test_button: Button = Button(text="Super Duper Text")
+test_button_2: Button = Button(text="Super Duper Text Two!")
 
 while True:
     for event in pygame.event.get():
@@ -78,7 +72,9 @@ while True:
             yyy += 80
 
     screen.blit(texture("version_text"), (7, 690))
-    test_button.render(screen, (400, 400))
+    test_button.render(screen, (1100, 680))
+    test_button_2.render(screen, (640, 100))
+    test_button.render(screen, (640, 600))
 
     pygame.display.update()
     clock.tick(60)

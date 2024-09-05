@@ -1,12 +1,11 @@
 import pygame
 import glob
 import json
-from better_log import log
+import logging
 from other import path_to_assets
 from other import to_namespace
 
 pygame.init()
-print = log.new_log # NOQA
 
 texture_dict = {}
 
@@ -28,8 +27,11 @@ def load_textures(full_reload: bool = True, location: str = "", dump: bool = Fal
     texture_files = glob.glob(pathname=location + "assets/*/textures/**/*.png", recursive=True)
     for txt in texture_files:
         name = path_to_assets(txt, location)
-        texture_dict[name] = pygame.image.load(txt)
-        print('Loaded texture "' + name + '"')
+        try:
+            texture_dict[name] = pygame.image.load(txt)
+            logging.info('Loaded texture "' + name + '"')
+        except FileNotFoundError:
+            logging.error(f'Attempted to load non-existent image {name}')
     if dump:
         texture_keys = dict()
         texture_keys["loaded_textures"] = list(texture_dict.keys())

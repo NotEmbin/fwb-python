@@ -1,9 +1,9 @@
 import glob
 import json
-from better_log.log import new_log
+import logging
 from other import path_to_data
 
-print = new_log # NOQA
+logging.basicConfig(format="[%(asctime)s] [%(levelname)s] %(message)s", level=logging.DEBUG)
 registry = {}
 
 registries = [
@@ -21,7 +21,6 @@ def load_registries(full_reload: bool = True, location: str = "", dump: bool = F
             registry[_] = {}
     for reg in registries:
         reg_files = glob.glob(pathname=(location + "data/*/" + reg + "/**/*.json"), recursive=True)
-        # print(reg_files)
         reg_dict = registry[reg]
         for f in reg_files:
             name = path_to_data(f, reg, location)
@@ -29,9 +28,9 @@ def load_registries(full_reload: bool = True, location: str = "", dump: bool = F
                 file_contents = json.load(file)
             try:
                 reg_dict[name] = file_contents
-                print("Loaded " + reg + " \"" + name + "\"")
+                logging.info("Loaded " + reg + " \"" + name + "\"")
             except Exception as e:
-                print(("Failed to load " + reg + " \"" + name + "\": " + e), "error")
+                logging.exception(("Failed to load " + reg + " \"" + name + "\": " + str(e)))
         registry[reg] = reg_dict
     if dump:
         with open("dumps/registry.json", "w") as f:

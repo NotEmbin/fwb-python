@@ -1,14 +1,15 @@
 import pygame
-from better_log import log
+import logging
 
 pygame.init()
-print = log.new_log # NOQA
+logging.basicConfig(format="[%(asctime)s] [%(levelname)s] %(message)s", level=logging.DEBUG)
 
 game_version = 1
 game_version_display = "1.0.0"
 game_id = "fwb"
 game_name = "FNAF World Battle" # NOQA
 font = pygame.font.Font("assets/fwb/font/minecraft.ttf", 24)
+font_small = pygame.font.Font("assets/fwb/font/minecraft.ttf", 16)
 
 
 def to_namespace(string):

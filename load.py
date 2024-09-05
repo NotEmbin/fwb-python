@@ -1,11 +1,11 @@
 import json
+import logging
 from os import path
-from better_log import log
 from textures import load_textures
 from data import load_registries
 from tags import load_tags
 
-print = log.new_log # NOQA
+logging.basicConfig(format="[%(asctime)s] [%(levelname)s] %(message)s", level=logging.DEBUG)
 
 resource_packs = [] # TODO: rename to "available_resource_packs"
 selected_resource_packs = []
@@ -28,18 +28,17 @@ def load_resources(include_resource_packs: bool = True):
             pack_exists = path.isfile(packjsonpath)
             if pack_exists:
                 try:
-                    print('Loading resource pack "' + rp + '"')
+                    logging.info('Loading resource pack "' + rp + '"')
                     with open(packjsonpath, "r") as ff:
                         pack_json = json.load(ff)
-                    print(pack_json)
                     load_registries(location=rppath, full_reload=False)
                     load_tags(location=rppath, full_reload=False)
                     load_textures(location=rppath, full_reload=False)
                 except FileNotFoundError as e:
-                    print(f'File not found error: {e}', "error")
+                    logging.exception(f'File not found error: {e}')
                 except Exception as e:
-                    print("An error occurred when loading the resource pack \"" + rp + "\", " + e, "error")
+                    logging.exception(f'An error occurred when loading the resource pack "{rp}": {e}')
             else:
-                print('Selected pack "' + rp + '" does not exist, or does not have a "pack.json" file!', "warn")
+                logging.warning('Selected pack "' + rp + '" does not exist, or does not have a "pack.json" file!')
 
-    print(selected_resource_packs)
+    logging.info(selected_resource_packs)
